@@ -1,0 +1,84 @@
+{
+	"name": "google-cloud-compute_dev",
+	"version": "1.1.0",
+	"label": "DG_Google_Cloud_Compute",
+	"description": "This connector sets labels in GCP compute instances.  This is desiged to be part of a Playbook where a previous play identfies a compromised device and sends the device name and zone.  Once the label is set, FortiGate's pre-configured dynamic address object will resolve the device IP and perform action in policy.",
+	"publisher": "Fortinet_CSE",
+	"icon_small_name": "small.png",
+	"icon_large_name": "large.png",
+	"category": [
+		"Compute Platform"
+	],
+	"configuration": {
+		"fields": [
+			{
+				"title": "Upload Service Account JSON File",
+				"type": "file",
+				"name": "auth_file",
+				"required": true,
+				"visible": true,
+				"editable": true,
+				"tooltip": "The service account private key file."
+			}
+		]
+	},
+	"operations": [
+        {
+			"operation": "set_labels",
+			"title": "set_labels",
+			"description": "set-user defined labels on instance",
+			"enabled": true,
+			"category": "investigation",
+			"annotation": "list_instances_within_zone",
+			"parameters": [
+				{
+					"title": "Zone",
+					"type": "text",
+					"name": "zone",
+					"required": true,
+					"visible": true,
+					"editable": true,
+					"tooltip": "The name of the zone for this request."
+				},
+                {
+					"title": "instance_name",
+					"type": "text",
+					"name": "instance_name",
+					"required": true,
+					"visible": true,
+					"editable": true,
+					"tooltip": "The name of the instance for this request."
+				},
+                {
+					"title": "new_key",
+					"type": "text",
+					"name": "new_key",
+					"required": true,
+					"visible": true,
+					"editable": true,
+					"tooltip": "New Label Key"
+				},
+				{
+					"title": "new_value",
+					"type": "text",
+					"name": "new_value",
+					"required": true,
+					"visible": true,
+					"editable": true,
+					"tooltip": "New Label value"
+				}
+                ],
+			"output_schema": {
+				"kind": "",
+				"id": "",
+				"items": [],
+				"nextPageToken": "",
+				"selfLink": "",
+				"warning": {}
+			},
+			"open": true
+		}
+	],
+	"help_online": "https://docs.fortinet.com/document/fortisoar/1.0.0/google-cloud-compute/350/google-cloud-compute-v1-0-0",
+	"cs_compatible": true
+}

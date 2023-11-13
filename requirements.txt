@@ -1,0 +1,3 @@
+# Add Python Dependencies
+google-cloud-compute
+google-api-core
