@@ -1,7 +1,7 @@
 {
-	"name": "google-cloud-compute_dev",
-	"version": "1.1.0",
-	"label": "DG_Google_Cloud_Compute",
+	"name": "gcp-compute-set-label",
+	"version": "1.0.0",
+	"label": "gcp-compute-set-label",
 	"description": "This connector sets labels in GCP compute instances.  This is desiged to be part of a Playbook where a previous play identfies a compromised device and sends the device name and zone.  Once the label is set, FortiGate's pre-configured dynamic address object will resolve the device IP and perform action in policy.",
 	"publisher": "Fortinet_CSE",
 	"icon_small_name": "small.png",
