@@ -9,3 +9,5 @@ new:
 labels = {'fixed_key': 'fixed_value'}
 
 You will also need to delete lines 50 through 67 from info.json
+
+**The upload folder contains a zip file which was exported from FortiSOAR, containing this code.  This can be uploaded to your FortiSOAR**
